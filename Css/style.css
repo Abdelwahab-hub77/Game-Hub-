@@ -1,0 +1,277 @@
+/* ====================== Global Styles ===================== */
+:root {
+  --primary: #00a0ff;
+  --primary-dark: #0089d9;
+  --dark-bg: #0f111a;
+  --card-bg: #1a1d2b;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0aec0;
+  --success: #48bb78;
+  --warning: #f6ad55;
+  --danger: #f56565;
+  --nav-bg: #3a497b;
+  --card-bg: #272b30;
+  --transition: all 0.3s ease-in-out;
+}
+
+
+body {
+  background: linear-gradient(135deg, var(--dark-bg) 0%, #161927 100%);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+    font-family:sans-serif;
+
+}
+
+/* ====================== Navbar ===================== */
+.navbar {
+  /* margin-top:100px; */
+  padding: 1rem 0;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.navbar .container {
+  background-color: var(--nav-bg);
+  border-radius: 0.75rem;
+}
+
+.logo-img {
+  height: 2.875rem;
+  filter: drop-shadow(0 0 0.625rem rgba(0, 160, 255, 0.3));
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--text-primary) 20%, #00d4ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-primary) !important;
+  margin: 0 0.75rem;
+  font-weight: 500;
+  position: relative;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 0.125rem;
+  background-color: var(--primary-dark);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+}
+
+/* ====================== Game Section ===================== */
+.game-section {
+  background: linear-gradient(rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.9)), url('../img/2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4);
+  width: 90%;
+}
+
+.game-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.5);
+}
+
+.game-section p {
+  font-size: 1.125rem;
+  max-width: 43.75rem;
+  margin: 0 auto 2rem;
+  color: var(--text-secondary);
+}
+
+/* ====================== Card Styles ===================== */
+.card {
+  background: var(--card-bg);
+  border: 0.125rem solid var(--primary-dark);
+  border-radius: 0.625rem;
+  transition: var(--transition);
+  overflow: hidden;
+    /* filter: grayscale(100%); */
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  filter: grayscale(0%);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 160, 255, 0.4);
+}
+
+/* ====================== Game Details ===================== */
+.big-box {
+  background-color: rgba(0, 6, 10, 0.95);
+  z-index: 100000;
+  overflow: scroll;
+}
+
+#close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+#close:hover {
+  color: var(--danger);
+  transform: scale(1.2);
+}
+
+.game-title {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.go-to {
+  transition: var(--transition);
+}
+
+.go-to:hover {
+  background-color: var(--primary);
+  border: var(--primary);
+  transform: scale(1.05);
+}
+
+/* ====================== Loader ===================== */
+.loader-box {
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.loader {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 50%;
+  margin: auto;
+  display: inline-block;
+  border-top: 0.25rem solid #fff;
+  border-right: 0.25rem solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 50%;
+  border-left: 0.25rem solid #ff3d00;
+  border-bottom: 0.25rem solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====================== Footer ===================== */
+.footer {
+  background: rgba(10, 14, 24, 0.8);
+  padding: 2.5rem 0 1.25rem;
+  margin-top: 3.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border-radius: 50%;
+  background: rgba(0, 160, 255, 0.1);
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-0.3125rem);
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 160, 255, 0.4);
+}
+
+.copyright {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 1.25rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar .container {
+    width: 95%;
+  }
+  .game-section {
+    padding: 2rem 1rem;
+  }
+  .logo-text {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  .game-title {
+    font-size: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

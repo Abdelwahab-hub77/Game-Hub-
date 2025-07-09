@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameHub | Best Free-to-Play Games Reviews & Guides</title>
+
+    <!-- Meta Tags for SEO -->
+    <meta
+      name="description"
+      content="Discover top-rated free-to-play PC, console, and mobile games. Browse honest reviews, guides, and updates on MMORPG, shooter, racing, strategy and more!"
+    />
+    <meta
+      name="keywords"
+      content="free games, MMORPG, shooter games, racing, strategy games, game reviews, play free, GameHub"
+    />
+    <meta name="author" content="GameHub Team" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="GameHub - Best Free-to-Play Games" />
+    <meta
+      property="og:description"
+      content="Browse the best F2P games with reviews, guides, and news. All free, all in one place."
+    />
+    <meta property="og:image" content="img/logo.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+
+  <body>
+    <!-- ====================== Navbar ===================== -->
+
+    <header>
+      <nav class="navbar navbar-expand-lg p-0 mt-5">
+        <div class="container rounded-5 p-2 w-75">
+          <a class="d-flex align-content-center justify-content-center text-decoration-none" href="#">
+            <img
+              src="./img/logo.png"
+              alt="Logo"
+              class="logo-img me-2"
+            />
+            
+              <h6 class="logo-text">GameHub</h6>
+           
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end text-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  data-category="mmorpg"
+                  >Mmorpg</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-category="shooter">Shooter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-category="sailing"
+                  >Sailing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-category="strategy"
+                  >Strategy</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-category="superhero"
+                  >Super hero</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-category="racing">Racing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ====================== Main ===================== -->
+    <main>
+      <div id="myScrollableDiv"></div>
+      <section>
+      <div class="container text-center py-4">
+        <section class="game-section">
+          <h2 class="text-white display-5 fw-bold">
+            Discover Amazing Free-to-Play Games
+          </h2>
+          <p class="text-secondary">
+            Explore handpicked games for every genre and platform — all free,
+            all fun!
+          </p>
+        </section>
+      </div>
+      </section>
+
+
+      <div class="container mt-5">
+        <h2 class="mb-3 text-white">Popular Games</h2>
+        <div class="row gy-2 displayGame"><!-- Game Cards Here --></div>
+      </div>
+
+      <div
+        class="big-box top-0 bottom-0 start-0 end-0 position-fixed text-white d-none"
+      >
+        <div class="container py-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fs-4">Game Details</h3>
+            <i
+              class="fa-regular fa-circle-xmark fs-3 cursor-pointer"
+              id="close"
+            ></i>
+          </div>
+          <div class="row detailsGame"><!-- Game Details Here --></div>
+        </div>
+      </div>
+
+      <div
+        class="loader-box top-0 bottom-0 start-0 end-0 position-fixed d-flex justify-content-center align-items-center d-none"
+      >
+        <span class="loader"></span>
+      </div>
+    </main>
+
+    <!-- ====================== Footer ===================== -->
+    <footer class="footer bg-dark text-secondary py-5 mt-5">
+      <div class="container">
+        <div class="social-icons mb-4 text-center">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="text-white mb-3">About GameHub</h5>
+            <p>
+              We bring you the best free-to-play titles across platforms with
+              quality reviews, guides, and news.
+            </p>
+          </div>
+          <div class="col-md-2 mb-4">
+            <h5 class="text-white mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Browse Games</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Top Categories</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">News</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5 class="text-white mb-3">Categories</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >MMORPG</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Shooter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Strategy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Racing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5 class="text-white mb-3">Newsletter</h5>
+            <p>Get the latest game releases and updates.</p>
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+              />
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 small">
+          &copy; 2025 GameHub. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

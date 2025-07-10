@@ -1,6 +1,3 @@
-
-"use strict";
-
 export class Display {
   constructor() {
     this.loader = document.querySelector(".loader-box");
@@ -8,12 +5,12 @@ export class Display {
     this.gameCardsContainer = document.querySelector(".displayGame");
   }
 
-  displayGames(gamesArray) {
+  displayGames(gamesArray, showDetailsCallback) {
     this.clearInnerHTML(this.gameCardsContainer);
-    gamesArray.forEach((game) => this.createGameCard(game));
+    gamesArray.forEach((game) => this.createGameCard(game, showDetailsCallback));
   }
 
-  createGameCard(game) {
+  createGameCard(game, showDetailsCallback) {
     const newCard = document.createElement("div");
     newCard.classList.add("col-md-6", "col-lg-4", "col-xl-3");
     newCard.innerHTML = `
@@ -34,7 +31,7 @@ export class Display {
         </div>
       </figure>`;
     
-    newCard.querySelector(".card").addEventListener("click", () => (game));
+    newCard.querySelector(".card").addEventListener("click", () => showDetailsCallback(game));
     this.gameCardsContainer.appendChild(newCard);
   }
 
@@ -85,4 +82,3 @@ export class Display {
     this.bigBox.classList.add("d-none");
   }
 }
-
